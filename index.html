@@ -11,12 +11,38 @@
     <title>Тест для разработчиков</title>
 </head>
 <body>
-    <header></header>
+    <header class="container">
+        <h1 class="text-center mt-3">Тест для разрабов</h1>
 
-    <main></main>
+        <br/>
+
+        <div class="d-grid gap-2 col-2 mx-auto">
+            <button type="button" class="btn btn-secondary btn-lg" data-bs-toggle="modal" data-bs-target="#resultsModal" onclick="showResults()">Результаты</button>
+            <button id="start_test" type="button" class="btn btn-success btn-lg" onclick="startTest()">Начать тест</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="modal fade" id="resultsModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="modalLabel">Мои результаты</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="results"></div>
+                </div>
+            </div>
+        </div>
+
+        <br/>
+
+        <div id="test"></div>
+    </main>
 
     <footer></footer>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
